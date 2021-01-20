@@ -19,5 +19,16 @@ console.log('Trello powerup devleopment started')
 window.TrelloPowerUp.initialize({
     'card-badges':function(t,opts){
        return [];
-    }
+    },
+    'card-back-section': function (t, options){
+      return {
+        title: '🤑 My Expense Tracker 🤑',
+        // icon: GRAY_ICON, // Must be a gray icon, colored icons not allowed.
+        content: {
+          type: 'iframe',
+          url: t.signUrl('./components/addTransaction'),
+          // height: 'auto' // Max height is 500
+        }
+      };
+    },
 })
