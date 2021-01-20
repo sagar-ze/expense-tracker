@@ -3,6 +3,7 @@
 // import './index.css';
 // import App from './App';
 // import reportWebVitals from './reportWebVitals';
+import AddTransactions from "./components/addTransaction";
 
 // ReactDOM.render(
 //   <React.StrictMode>
@@ -26,7 +27,7 @@ window.TrelloPowerUp.initialize({
         // icon: GRAY_ICON, // Must be a gray icon, colored icons not allowed.
         content: {
           type: 'iframe',
-          url: t.signUrl('./components/addTransaction'),
+          url: t.signUrl(AddTransactions),
           // height: 'auto' // Max height is 500
         }
       };
